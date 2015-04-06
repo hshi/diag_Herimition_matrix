@@ -5,8 +5,8 @@ CC      := mpic++ -DMPI_HAO -DUSE_MKL
 FLAGS   := -Wall -O3 -std=c++11
 HAOFLG  := -I/home/boruoshihao/lib_hao/mpi/include
 HAOLIB  := -L/home/boruoshihao/lib_hao/mpi/lib -lmatrixhao
-MFLG    := -DMKL_ILP64 -fopenmp -m64 -I/opt/intel/mkl/include
-MLIB    := -Wl,--no-as-needed -L/opt/intel/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_gnu_thread  -ldl -lpthread -lm
+MFLG    := -fopenmp -m64 -I/opt/intel/mkl/include
+MLIB    := -Wl,--no-as-needed -L/opt/intel/mkl/lib/intel64 -lmkl_intel_lp64 -lmkl_core -lmkl_gnu_thread  -ldl -lpthread -lm
 
 #On Hurricane or Storm
 #CC      := mpicxx -DMPI_HAO -DUSE_ACML
