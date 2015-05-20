@@ -10,10 +10,15 @@ MLIB    := -Wl,--no-as-needed -L/opt/intel/mkl/lib/intel64 -lmkl_intel_lp64 -lmk
 
 #On Hurricane or Storm
 #CC      := mpicxx -DMPI_HAO -DUSE_ACML
-#FLAGS   := -Wall -O3 -march=corei7 -m64 -std=c++11  #Hurricane
-#FLAGS   := -Wall -O3 -march=barcelona -std=c++11    #Storm
-#HAOFLG  := -I/sciclone/home00/hshi/lib_hao/library/mpi/include
-#HAOLIB  := -L/sciclone/home00/hshi/lib_hao/library/mpi/lib -lmatrixhao
+
+#FLAGS   := -Wall -O3 -march=corei7 -m64 -std=c++11               #Hurricane
+#HAOFLG  := -I/sciclone/home00/hshi/lib_hao/mpi/include           #Hurricane
+#HAOLIB  := -L/sciclone/home00/hshi/lib_hao/mpi/lib -lmatrixhao   #Hurricane
+
+#FLAGS   := -Wall -O3 -march=barcelona -std=c++11                 #Storm
+#HAOFLG  := -I/storm/home00/hshi/lib_hao/mpi/include              #Storm
+#HAOLIB  := -L/storm/home00/hshi/lib_hao/mpi/lib -lmatrixhao      #Storm
+
 #MFLG    :=
 #MLIB    := -L${ACML}/lib -lacml
 
