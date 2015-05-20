@@ -30,7 +30,7 @@ int main()
 
     //Diagonal matrix
     Matrix<double,1> W(L);
-    eigen(hermitM, W);
+    eigen_cpu(hermitM, W);
 
 
     //Write to file
